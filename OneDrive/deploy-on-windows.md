@@ -39,8 +39,12 @@ The new OneDrive sync app can be used with SharePoint Server 2019, but not earli
 
 ### Make sure that WNS is set up correctly
 
-The OneDrive sync app uses Windows Push Notification Services (WNS) for optimum performance and battery life. Make sure you allow access from your network to the [endpoints that OneDrive uses](/office365/enterprise/urls-and-ip-address-ranges#sharepoint-online-and-onedrive-for-business).
- 
+The OneDrive sync app uses Windows Push Notification Services (WNS) for optimum performance and battery life. Make sure you allow access from your network to the [endpoints that OneDrive uses](/office365/enterprise/urls-and-ip-address-ranges#sharepoint-online-and-onedrive-for-business). 
+
+> [!Important]
+> 1. Your network proxies need to allow network traffic to bypass the following address: *.wns.microsoft.com, and
+> 2. Proxies must avoid HTTPS decryption for *.wns.microsoft.com. 
+
 ### Check if users already have the OneDrive sync app
 
 If the computers in your organization are running Windows 10, they already have the new sync app installed. If the computers have Office 2016 or Office 2013 (Home &amp; Student, Home &amp; Business, Professional, Personal, Home, or University) installed, they might also have the new sync app. 
